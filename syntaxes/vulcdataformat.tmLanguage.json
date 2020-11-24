@@ -1,0 +1,154 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "VDF",
+    "scopeName": "source.vdf",
+    "patterns": [
+        {
+            "include": "#value"
+        }
+    ],
+    "repository": {
+        "comment": {
+            "patterns": [
+                {
+                    "name": "comment.block.vulcdataformat",
+                    "begin": "/\\*",
+                    "end": "\\*/"
+                },
+                {
+                    "name": "comment.line.double-dash.vulcdataformat",
+                    "begin": "//",
+                    "end": "\\n"
+                }
+            ]
+        },
+        "type": {
+            "name": "storage.type.vulcdataformat",
+            "match": "\\b(boolean|byte|short|int|long|float|double|char|string|obj|list)\\b"
+        },
+        "boolean": {
+            "name": "constant.language.vulcdataformat",
+            "match": "\\b(true|false)\\b"
+        },
+        "number": {
+            "patterns": [
+                {
+                    "name": "constant.numeric.binary.vulcdataformat",
+                    "match": "(\\+|-|\\b)(0[bB][01]+)\\b"
+                },
+                {
+                    "name": "constant.numeric.octal.vulcdataformat",
+                    "match": "(\\+|-|\\b)(0[0-7]+)\\b"
+                },
+                {
+                    "name": "constant.numeric.hex.vulcdataformat",
+                    "match": "(\\+|-|\\b)(0[xX][0-9a-fA-F]+)\\b"
+                },
+                {
+                    "name": "constant.numeric.decimal.vulcdataformat",
+                    "match": "(\\+|-|\\b)(\\d+(\\.\\d+)?([eE][+-]?\\d+)?)\\b"
+                }
+            ]
+        },
+        "char": {
+            "name": "string.quoted.single.vulcdataformat",
+            "begin": "'",
+            "end": "'",
+            "patterns": [{
+                "include": "#escape-char"
+            }]
+        },
+        "string": {
+            "name": "string.quoted.double.vulcdataformat",
+            "begin": "\"",
+            "end": "\"",
+            "patterns": [{
+                "include": "#escape-char"
+            }]
+        },
+        "object-key": {
+            "name": "support.type.property-name.vulcdataformat",
+            "begin": "\"",
+            "end": "\"",
+            "patterns": [{
+                "include": "#escape-char"
+            }]
+        },
+        "escape-char": {
+            "patterns": [
+                {
+                    "name": "constant.character.escape.vulcdataformat",
+                    "match": "\\\\(\\\\|t|b|n|r|f|'|\")"
+                },
+                {
+                    "name": "invalid.illegal.unrecognized-string-escape.vulcdataformat.comments",
+                    "match": "\\\\."
+                }
+            ]
+        },
+        "object": {
+            "name": "meta.structure.object.vulcdataformat",
+            "begin": "\\{",
+            "end": "\\}",
+            "patterns": [
+                {
+                    "include": "#comment"
+                },
+                {
+                    "include": "#type"
+                },
+                {
+                    "include": "#object-key"
+                },
+                {
+                    "name": "meta.structure.object.value.vulcdataformat",
+                    "begin": ":",
+                    "end": ",|(?=\\})",
+                    "patterns": [
+                        {
+                            "include": "#value"
+                        }
+                    ]
+                }
+            ]
+        },
+        "array": {
+            "name": "meta.structure.array.vulcdataformat",
+            "begin": "\\[",
+            "end": "\\]",
+            "patterns": [
+                {
+                    "include": "#type"
+                },
+                {
+                    "include": "#value"
+                }
+            ]
+        },
+        "value": {
+            "patterns": [
+                {
+                    "include": "#comment"
+                },
+                {
+                    "include": "#boolean"
+                },
+                {
+                    "include": "#number"
+                },
+                {
+                    "include": "#char"
+                },
+                {
+                    "include": "#string"
+                },
+                {
+                    "include": "#object"
+                },
+                {
+                    "include": "#array"
+                }
+            ]
+        }
+    }
+}

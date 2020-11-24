@@ -1,0 +1,32 @@
+{
+    "name": "vulcdataformat",
+    "displayName": "VulcDataFormat",
+    "description": "Language support for Textual VDF",
+    "version": "0.1.0",
+    "engines": {
+        "vscode": "^1.51.0"
+    },
+    "contributes": {
+        "languages": [
+            {
+                "id": "vulcdataformat",
+                "aliases": [
+                    "VDF",
+                    "vulcdataformat"
+                ],
+                "extensions": [
+                    ".vdf",
+                    ".tvdf"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "vulcdataformat",
+                "scopeName": "source.vdf",
+                "path": "./syntaxes/vulcdataformat.tmLanguage.json"
+            }
+        ]
+    }
+}

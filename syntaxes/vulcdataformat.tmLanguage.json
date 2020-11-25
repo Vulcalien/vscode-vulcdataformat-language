@@ -102,9 +102,6 @@
             "end": "\\}",
             "patterns": [
                 {
-                    "include": "#comment"
-                },
-                {
                     "include": "#type"
                 },
                 {
@@ -119,6 +116,9 @@
                             "include": "#value"
                         }
                     ]
+                },
+                {
+                    "include": "#comment"
                 }
             ]
         },

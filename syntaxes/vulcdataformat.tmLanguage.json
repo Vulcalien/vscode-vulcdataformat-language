@@ -8,6 +8,10 @@
         },
         {
             "include": "#array"
+        },
+        {
+            "name": "comment.block.vulcdataformat",
+            "begin": "(?<=[\\}\\]])"
         }
     ],
     "repository": {

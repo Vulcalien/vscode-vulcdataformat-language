@@ -12,6 +12,9 @@
         {
             "name": "comment.block.vulcdataformat",
             "begin": "(?<=[\\}\\]])"
+        },
+        {
+            "include": "#comment"
         }
     ],
     "repository": {
@@ -135,9 +138,6 @@
         "value": {
             "patterns": [
                 {
-                    "include": "#comment"
-                },
-                {
                     "include": "#boolean"
                 },
                 {
@@ -154,6 +154,9 @@
                 },
                 {
                     "include": "#array"
+                },
+                {
+                    "include": "#comment"
                 }
             ]
         }

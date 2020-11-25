@@ -4,7 +4,10 @@
     "scopeName": "source.vdf",
     "patterns": [
         {
-            "include": "#value"
+            "include": "#object"
+        },
+        {
+            "include": "#array"
         }
     ],
     "repository": {

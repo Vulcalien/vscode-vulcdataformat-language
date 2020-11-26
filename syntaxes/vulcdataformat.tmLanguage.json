@@ -77,7 +77,7 @@
             }]
         },
         "object-key": {
-            "name": "support.type.property-name.vulcdataformat",
+            "name": "string.vulcdataformat support.type.property-name.vulcdataformat",
             "begin": "\"",
             "end": "\"",
             "patterns": [{

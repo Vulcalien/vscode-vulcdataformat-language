@@ -10,7 +10,7 @@
             "include": "#array"
         },
         {
-            "name": "comment.block.vulcdataformat",
+            "name": "comment.block.vdf",
             "begin": "(?<=[\\}\\]])"
         },
         {
@@ -21,47 +21,47 @@
         "comment": {
             "patterns": [
                 {
-                    "name": "comment.block.vulcdataformat",
+                    "name": "comment.block.vdf",
                     "begin": "/\\*",
                     "end": "\\*/"
                 },
                 {
-                    "name": "comment.line.double-dash.vulcdataformat",
+                    "name": "comment.line.double-dash.vdf",
                     "begin": "//",
                     "end": "\\n"
                 }
             ]
         },
         "type": {
-            "name": "storage.type.vulcdataformat",
+            "name": "storage.type.vdf",
             "match": "\\b(boolean|byte|short|int|long|float|double|char|string|obj|list)\\b"
         },
         "boolean": {
-            "name": "constant.language.vulcdataformat",
+            "name": "constant.language.vdf",
             "match": "\\b(true|false)\\b"
         },
         "number": {
             "patterns": [
                 {
-                    "name": "constant.numeric.binary.vulcdataformat",
+                    "name": "constant.numeric.binary.vdf",
                     "match": "(\\+|-|\\b)(0[bB][01]+)\\b"
                 },
                 {
-                    "name": "constant.numeric.octal.vulcdataformat",
+                    "name": "constant.numeric.octal.vdf",
                     "match": "(\\+|-|\\b)(0[0-7]+)\\b"
                 },
                 {
-                    "name": "constant.numeric.hex.vulcdataformat",
+                    "name": "constant.numeric.hex.vdf",
                     "match": "(\\+|-|\\b)(0[xX][0-9a-fA-F]+)\\b"
                 },
                 {
-                    "name": "constant.numeric.decimal.vulcdataformat",
+                    "name": "constant.numeric.decimal.vdf",
                     "match": "(\\+|-|\\b)(\\d+(\\.\\d+)?([eE][+-]?\\d+)?)\\b"
                 }
             ]
         },
         "char": {
-            "name": "string.quoted.single.vulcdataformat",
+            "name": "string.quoted.single.vdf",
             "begin": "'",
             "end": "'",
             "patterns": [{
@@ -69,7 +69,7 @@
             }]
         },
         "string": {
-            "name": "string.quoted.double.vulcdataformat",
+            "name": "string.quoted.double.vdf",
             "begin": "\"",
             "end": "\"",
             "patterns": [{
@@ -77,7 +77,7 @@
             }]
         },
         "object-key": {
-            "name": "string.vulcdataformat support.type.property-name.vulcdataformat",
+            "name": "string.vdf support.type.property-name.vdf",
             "begin": "\"",
             "end": "\"",
             "patterns": [{
@@ -87,17 +87,17 @@
         "escape-char": {
             "patterns": [
                 {
-                    "name": "constant.character.escape.vulcdataformat",
+                    "name": "constant.character.escape.vdf",
                     "match": "\\\\(\\\\|t|b|n|r|f|'|\")"
                 },
                 {
-                    "name": "invalid.illegal.unrecognized-string-escape.vulcdataformat.comments",
+                    "name": "invalid.illegal.unrecognized-string-escape.vdf.comments",
                     "match": "\\\\."
                 }
             ]
         },
         "object": {
-            "name": "meta.structure.object.vulcdataformat",
+            "name": "meta.structure.object.vdf",
             "begin": "\\{",
             "end": "\\}",
             "patterns": [
@@ -108,7 +108,7 @@
                     "include": "#object-key"
                 },
                 {
-                    "name": "meta.structure.object.value.vulcdataformat",
+                    "name": "meta.structure.object.value.vdf",
                     "begin": ":",
                     "end": ",|(?=\\})",
                     "patterns": [
@@ -123,7 +123,7 @@
             ]
         },
         "array": {
-            "name": "meta.structure.array.vulcdataformat",
+            "name": "meta.structure.array.vdf",
             "begin": "\\[",
             "end": "\\]",
             "patterns": [

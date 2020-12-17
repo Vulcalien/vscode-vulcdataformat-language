@@ -9,7 +9,7 @@
     "contributes": {
         "languages": [
             {
-                "id": "vulcdataformat",
+                "id": "vdf",
                 "aliases": [
                     "VDF",
                     "vulcdataformat"
@@ -23,9 +23,9 @@
         ],
         "grammars": [
             {
-                "language": "vulcdataformat",
+                "language": "vdf",
                 "scopeName": "source.vdf",
-                "path": "./syntaxes/vulcdataformat.tmLanguage.json"
+                "path": "./syntaxes/vdf.tmLanguage.json"
             }
         ]
     }

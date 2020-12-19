@@ -2,7 +2,7 @@
     "name": "vulcdataformat",
     "displayName": "VulcDataFormat",
     "description": "Language support for Textual VDF",
-    "version": "0.1.0",
+    "version": "0.3.0-wip",
     "engines": {
         "vscode": "^1.51.0"
     },

@@ -4,7 +4,7 @@
     VDF language support for VSCode
 </h1>
 
-VS Code language support extension for [Textual VDF](https://github.com/Vulcalien/VulcDataFormat-Specification)
+VS Code language support extension for [Textual VDF](https://github.com/Vulcalien/VulcDataFormat-Specification).
 
 ## Features
 - Syntax Highlighting

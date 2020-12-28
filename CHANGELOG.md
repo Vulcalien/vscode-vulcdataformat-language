@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.0.0 - 2020-12-28
+### Added
+- Extension icon
+- MIT License
+
+### Changed
+- Language ID is now "vdf" instead of "vulcdataformat"
+- Types and boolean values are now case-insensitive
+
 ## 0.2.0 - 2020-11-27
 ### Added
 - The top-level element must be of object or list type

@@ -11,7 +11,7 @@
         },
         {
             "name": "comment.block.vdf",
-            "begin": "(?<=[\\}\\]])"
+            "begin": "(?<=[\\}\\]])(?<!(?:boolean|byte|short|int|long|float|double|char|string|obj|list)\\[\\])"
         }
     ],
     "repository": {

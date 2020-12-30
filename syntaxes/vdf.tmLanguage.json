@@ -31,7 +31,7 @@
         },
         "type": {
             "name": "storage.type.vdf",
-            "match": "(?i)\\b(boolean|byte|short|int|long|float|double|char|string|obj|list)\\b"
+            "match": "(?i)\\b(boolean|byte|short|int|long|float|double|char|string|obj|list)(\\[\\]|\\b)"
         },
         "boolean": {
             "name": "constant.language.vdf",

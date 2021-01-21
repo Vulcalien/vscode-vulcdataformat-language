@@ -35,7 +35,7 @@
         },
         "boolean": {
             "name": "constant.language.vdf",
-            "match": "(?i)\\b(true|false)\\b"
+            "match": "(?i)\\b(false|true)\\b"
         },
         "number": {
             "patterns": [

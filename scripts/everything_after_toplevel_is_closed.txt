@@ -1,0 +1,34 @@
+(?<=                    # if there was...
+    (
+        ((?i)\\b(false|true)\\b)                            # a boolean value (regex enclosed by additional parentheses because of the (?i) modifier)
+
+        |                                                   # or
+
+                                                            # (numbers)
+        (\\+|-|\\b)(0[bB][01]+)\\b                          # a binary number
+        |                                                   # or
+        (\\+|-|\\b)(0[0-7]+)\\b                             # an octal number
+        |                                                   # or
+        (\\+|-|\\b)(0[xX][0-9a-fA-F]+)\\b                   # an hex number
+        |                                                   # or
+        (\\+|-|\\b)(\\d+(\\.\\d+)?([eE][+-]?\\d+)?)\\b      # a decimal number
+
+        |                                                   # or
+
+        '                                                   # the end of a char
+        |                                                   # or
+        \"                                                  # the end of a string
+
+        |                                                   # or
+
+        }                                                   # the end of an object
+        |                                                   # or
+        ]                                                   # the end of an array
+    )
+)
+            # and also...
+(?<!                    # make sure that the closing bracket of an array type (eg. int[])
+                        # is not considered as the end of an array
+                        # so we want to be sure that there was not a type
+    (?i)\\b(?:boolean|byte|short|int|long|float|double|char|string|obj|list)\\[\\]          # this is not the same regex as "storage.type.vdf": this was slightly modified
+)

@@ -11,7 +11,7 @@
         },
         {
             "name": "comment.block.vdf",
-            "begin": "(?<=[\\}\\]])(?<!(?:boolean|byte|short|int|long|float|double|char|string|obj|list)\\[\\])"
+            "begin": "(?<=(((?i)\\b(false|true)\\b)|(\\+|-|\\b)(0[bB][01]+)\\b|(\\+|-|\\b)(0[0-7]+)\\b|(\\+|-|\\b)(0[xX][0-9a-fA-F]+)\\b|(\\+|-|\\b)(\\d+(\\.\\d+)?([eE][+-]?\\d+)?)\\b|'|\"|}|]))(?<!(?i)\\b(?:boolean|byte|short|int|long|float|double|char|string|obj|list)\\[\\])"
         }
     ],
     "repository": {

@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.1.0 - 2021-01-22
+### Changed
+- Switched to Textual VDF version 2.0
+  - Now, all VDF types can be used as top-level elements
+  - Note: VDF 1.0 files can still be highlighted
+- The brackets in array types are now highlighted as part of the type
+
 ## 1.0.0 - 2020-12-28
 ### Added
 - Extension icon
